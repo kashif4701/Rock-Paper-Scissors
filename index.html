@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.858);
+  text-align: center;
+  color: aliceblue;
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 40px;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+img {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  /* padding: 10px 10px 10px 40px; */
+  /* border: 2px solid black; */
+  border-radius: 60%;
+  transition: all 0.1s ease-in-out 0.02s;
+
+  animation: moveBox 2s ease 1s infinite alternate;
+  /* background-color: black; */
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+img:hover {
+  /* background-color: white; */
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+  /* border-radius: 100px; */
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+
+.score-board {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  gap: 20px;
+}
+
+#you {
+  padding-left: 20px;
+}
+#Comp {
+  padding-left: 30px;
+}
+
+.msg-container {
+  /* height: 100px; */
+  /* width: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  transition: all 1s ease-out;
+}
+
+.msg-container p {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+}
+
+.msg-container:hover {
+  /* transform: scale(1.1); */
+  border-radius: 100%;
+  transition: all 1s ease-out;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+      </header>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="rock">
+        <img src="/Images/Rock.png" alt="" />Rock
+      </div>
+      <div class="choice" id="paper">
+        <img src="/Images/Paper.png" alt="" />Paper
+      </div>
+      <div class="choice" id="scissor">
+        <img src="/Images/Scissor.png" alt="" />Scissor
+      </div>
+    </div>
+
+    <div class="score-board">
+      <div class="score">
+        <p id="you">0</p>
+        <p>You</p>
+      </div>
+
+      <div class="score">
+        <p id="Comp">0</p>
+        <p>Comp</p>
+      </div>
+    </div>
+
+    <div class="msg-container"><p id="msg">Play Your Move</p></div>
+  </body>
+  <script src="app.js"></script>
+</html>
